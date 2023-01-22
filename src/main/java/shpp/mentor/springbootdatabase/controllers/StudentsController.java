@@ -31,7 +31,7 @@ public class StudentsController {
         }
 
         @GetMapping("/{id}")
-        @ApiOperation("Getting object Student by id")
+        @ApiOperation("Getting an object Student by id")
         public ResponseEntity<StudentsEntity> getById(@PathVariable Long id) {
         try {
             return ResponseEntity.ok(studentsRepository.findById(id).get());
