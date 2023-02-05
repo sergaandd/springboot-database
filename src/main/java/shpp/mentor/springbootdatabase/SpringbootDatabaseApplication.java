@@ -22,7 +22,7 @@ public class SpringbootDatabaseApplication {
         return args -> {
             taskRepository.save(new TaskEntity("WakeUp", LocalDateTime.now()));
             taskRepository.save(new TaskEntity("Shower", LocalDateTime.now()));
-            taskRepository.save(new TaskEntity("WorkGo", LocalDateTime.now()));
+            taskRepository.save(new TaskEntity("Working", LocalDateTime.now()));
             taskRepository.save(new TaskEntity("Breakfast", LocalDateTime.now()));
         };
     }
