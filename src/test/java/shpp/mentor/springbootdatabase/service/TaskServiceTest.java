@@ -22,7 +22,6 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 class TaskServiceTest {
     TaskEntity task = new TaskEntity("WakeUp", LocalDateTime.now());
-
     TaskEntity task1 = new TaskEntity("Shower", LocalDateTime.now().plusMinutes(10));
     TaskEntity task2 = new TaskEntity("Breakfast", LocalDateTime.now().plusMinutes(25));
     TaskEntity task3 = new TaskEntity("Dressing", LocalDateTime.now().plusMinutes(40));
