@@ -19,11 +19,13 @@ public class TaskController {
         this.taskService = taskService;
     }
 
+
     @GetMapping("/todo")
     @ApiOperation("Getting a list of tasks")
     public List<TaskEntity> getAll() {
         return taskService.getAll();
     }
+
 
     @GetMapping("/todo/{id}")
     @ApiOperation("Getting an task by id")
