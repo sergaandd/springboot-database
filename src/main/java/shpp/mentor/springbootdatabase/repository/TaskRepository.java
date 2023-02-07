@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import shpp.mentor.springbootdatabase.entity.TaskEntity;
 
 @Repository
-public interface TaskRepository extends JpaRepository<TaskEntity,Long> {
+public interface TaskRepository extends JpaRepository<TaskEntity, Long> {
 
 }

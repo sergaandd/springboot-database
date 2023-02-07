@@ -12,8 +12,10 @@ public class CheckEnumClass implements ConstraintValidator<CheckEnum, String> {
 
     @Override
     public boolean isValid(String st, ConstraintValidatorContext constraintValidatorContext) {
-        for (Status val:Status.values()){
-            if (st.equals(val.toString())){return true;}
+        for (Status val : Status.values()) {
+            if (st.equals(val.toString())) {
+                return true;
+            }
         }
         return false;
     }

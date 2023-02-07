@@ -16,7 +16,8 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig {
-    public  static final String API_PATH="/todo/**";
+    public static final String API_PATH = "/todo/**";
+
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http

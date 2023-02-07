@@ -34,7 +34,7 @@ public class TaskEntity {
     @Column(name = "status")
     @Length(min = 4)
     @CheckEnum()
-    private String status= Status.PLANNED.toString();
+    private String status = Status.PLANNED.toString();
 
     public TaskEntity(String name, LocalDateTime start) {
         this.name = name;

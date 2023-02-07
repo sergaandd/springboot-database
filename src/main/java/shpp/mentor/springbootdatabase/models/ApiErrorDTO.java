@@ -1,17 +1,18 @@
 package shpp.mentor.springbootdatabase.models;
 
 public class ApiErrorDTO {
-        private final String code;
+    private final String code;
 
-        private final String error;
+    private final String error;
 
-        private final String message;
+    private final String message;
 
-    public ApiErrorDTO(String code,String error,String message){
-            this.code=code;
-            this.error=error;
-            this.message=message;
-        }
+    public ApiErrorDTO(String code, String error, String message) {
+        this.code = code;
+        this.error = error;
+        this.message = message;
+    }
+
     public String toSuccess() {
         return "Success{" +
                 "code:'" + code + '\'' +

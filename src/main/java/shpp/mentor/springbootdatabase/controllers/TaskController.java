@@ -37,7 +37,7 @@ public class TaskController {
         return taskService.addNew(task, bindingResult);
     }
 
-    @PutMapping("/todo/{id}")
+    @PutMapping("/todo")
     @ApiOperation("Updating task in H2")
     public ResponseEntity<Object> update(@Valid @RequestBody TaskEntity task, BindingResult bindingResult) {
         return taskService.updateById(task, bindingResult);

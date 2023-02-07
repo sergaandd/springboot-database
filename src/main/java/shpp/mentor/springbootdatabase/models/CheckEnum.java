@@ -6,13 +6,16 @@ import java.lang.annotation.*;
 
 @Documented
 @Constraint(validatedBy = CheckEnumClass.class)
-@Target( { ElementType.METHOD, ElementType.FIELD })
+@Target({ElementType.METHOD, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CheckEnum {
 
     String message() default "No errors in field Status";
+
     Class<?>[] groups() default {};
+
     Class<? extends Payload>[] payload() default {};
+
     String value() default "";
 
 }
