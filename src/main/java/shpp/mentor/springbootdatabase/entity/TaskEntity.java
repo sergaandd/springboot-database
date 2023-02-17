@@ -24,7 +24,7 @@ public class TaskEntity {
 
     @JsonProperty(value = "name")
     @Column(name = "name")
-    @Length(min = 3)
+    @Length(min = 3,max=25)
     private String name;
 
     @JsonProperty(value = "start")
@@ -32,14 +32,13 @@ public class TaskEntity {
     private LocalDateTime start;
 
     @Column(name = "status")
-    @Length(min = 4)
+    @Enumerated(EnumType.ORDINAL)
     @CheckEnum()
-    private String status = Status.PLANNED.toString();
+    private Status status = Status.startStatus();
 
     public TaskEntity(String name, LocalDateTime start) {
         this.name = name;
         this.start = start;
-        this.status = Status.PLANNED.toString();
     }
 
     public Long getId() {
@@ -55,7 +54,7 @@ public class TaskEntity {
     }
 
     public String getStatus() {
-        return status;
+        return status.toString();
     }
 
     @Override
